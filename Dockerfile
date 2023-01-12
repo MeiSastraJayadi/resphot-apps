@@ -1,4 +1,4 @@
-FROM python:3-slim-buster
+FROM docker.io/petronetto/tensorflow-alpine:latest
 
 RUN mkdir /code
 
@@ -9,8 +9,6 @@ RUN apt-get install ffmpeg libsm6 libxext6  -y
 WORKDIR /code
 
 COPY requirements.txt .
-
-RUN pip install --uppgrade pip
 
 RUN pip install -r requirements.txt
 
