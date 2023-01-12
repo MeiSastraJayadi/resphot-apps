@@ -6,7 +6,7 @@ WORKDIR /code
 
 COPY requirements.txt .
 
-RUN python3 -m pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.0-py3-none-any.whl
+pip3 install https://github.com/better/alpine-tensorflow/releases/download/alpine3.7-tensorflow1.7.0/tensorflow-1.7.0-cp36-cp36m-linux_x86_64.whl
 
 RUN pip install -r requirements.txt
 
