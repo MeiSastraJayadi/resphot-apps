@@ -2,10 +2,6 @@ FROM docker.io/petronetto/tensorflow-alpine:latest
 
 RUN mkdir /code
 
-RUN apt-get update
-
-RUN apt-get install ffmpeg libsm6 libxext6  -y
-
 WORKDIR /code
 
 COPY requirements.txt .
