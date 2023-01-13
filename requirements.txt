@@ -3,4 +3,3 @@ uvicorn
 opencv-python
 pillow
 numpy
-tensorflow
