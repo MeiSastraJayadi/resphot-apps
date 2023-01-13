@@ -1,4 +1,4 @@
-FROM continuumio/anaconda 
+FROM python:3-slim-buster 
 
 RUN mkdir /code
 
