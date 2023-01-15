@@ -26,7 +26,7 @@ spec:
   type: ClusterIP
   ports:
   - name: "resphot-apps"
-    port: 8000
+    port: 8080
   selector:
     app: resphot-apps
 
@@ -46,6 +46,6 @@ spec:
           service:
             name: resphot-apps
             port:
-              number: 8000
+              number: 8080
         path: /
         pathType: ImplementationSpecific
