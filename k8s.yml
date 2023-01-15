@@ -13,7 +13,7 @@ spec:
         app: resphot-apps
     spec:
       containers:
-      - image: registry.cloud.okteto.net/resphot-apps-meisastrajayadi/resphot-server:python
+      - image: registry.cloud.okteto.net/resphot-apps-meisastrajayadi/server:python
         name: resphot-apps
 
 ---
