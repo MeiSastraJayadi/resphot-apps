@@ -1,6 +1,6 @@
 build:
   resphot-apps-meisastrajayadi:
-    image: registry.cloud.okteto.net/resphot-apps-meisastrajayadi/app-backend:python 
+    image: registry.cloud.okteto.net/resphot-apps-meisastrajayadi/back-end:python 
     context: .
 deploy:
   - kubectl apply -f k8s.yml
