@@ -18,4 +18,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["uvicorn","application.main:app --port=8080"]
+CMD ["uvicorn","application.main:app --port 8080"]
