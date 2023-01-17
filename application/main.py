@@ -1,4 +1,5 @@
 from fastapi import FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import HTTPException 
 from fastapi.requests import Request
 from fastapi.responses import FileResponse, JSONResponse, Response
@@ -12,10 +13,22 @@ import uuid
 app = FastAPI()
 IMAGE_DIR = "./application/images/"
 
+origins = [
+            "https://meisastrajayadi.github.io/resphot-client/",
+        ]
+app.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+        )
+
 
 @app.get("/")
 def show_hello() : 
     return JSONResponse({"data" : "Hello World"}, status_code=200)
+
 
 @app.post("/upload-image")
 async def upload_image(file : UploadFile) : 
