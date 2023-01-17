@@ -14,7 +14,7 @@ app = FastAPI()
 IMAGE_DIR = "./application/images/"
 
 origins = [
-            "https://meisastrajayadi.github.io/resphot-client/",
+            "*",
         ]
 app.add_middleware(
         CORSMiddleware,
